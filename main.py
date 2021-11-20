@@ -29,7 +29,7 @@ try:
         # if i == 1456432:
        #     print('infinite')
        # print(i)
-    #posture.applyPosture('Crouch', 3.0)
+    posture.applyPosture('Crouch', 3.0)
 
     Rotation_foot_LLeg.main(NAO_IP, PORT)
     Move_backward.main(NAO_IP, PORT)
