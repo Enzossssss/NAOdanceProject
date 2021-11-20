@@ -16,12 +16,20 @@ __all__ = [
     'StandInit',
     'StandZero',
     'Union_arms',
+
     'Hello',
     'Wipe_Forehead',
-    # 'Mani_sui_fianchi',
-    # 'Chitarra',
-    # 'Ballo_braccia',
-    # 'Left_sprinkler',
-    # 'Right_sprinkler',
-    # 'Happy_Birthday'
+
+    'AirGuitar',
+    'ComeOn',
+    'Dab',
+    'DanceMove',
+    'PulpFiction',
+    'TheRobot',
+
+    'Mani_sui_fianchi',
+    'Ballo_braccia',
+    'Left_sprinkler',
+    'Right_sprinkler',
+    'Happy_Birthday'
 ]
