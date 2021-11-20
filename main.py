@@ -35,6 +35,7 @@ try:
     Move_backward.main(NAO_IP, PORT)
     Union_arms.main(NAO_IP, PORT)
     Stand.main(NAO_IP, PORT)
+    Hello.main(NAO_IP, PORT)
 
     for i in range(1000000):
         print(i)
