@@ -1,7 +1,7 @@
-from naoqi import ALProxy
 import sys
 import os
-from positions import *
+import time
+from utils import Nao
 
 NAO_IP = sys.argv[1]
 PORT = int(sys.argv[2])
@@ -10,38 +10,28 @@ print(PORT)
 
 music_path = os.path.abspath(os.getcwd()) + '/music.wav'
 
-tts = ALProxy("ALTextToSpeech", NAO_IP, PORT)
-tts.say("Team Becchi pagliacci <3. P.S.: vi vogliamo bene ugualmente")
+Nao = Nao(NAO_IP, PORT)
 
-player = ALProxy("ALAudioPlayer", NAO_IP, PORT)
+Nao.say("Team Becchi pagliacci <3. P.S.: vi vogliamo bene ugualmente")
 
-song = player.post.playFile(music_path)
+song = Nao.playMusic(music_path)
+
+# TODO: function to create choreogarfy
+
+with open('choreography.txt', 'r') as file:
+    choreography = [line.strip() for line in file]
+
+time.sleep(1)
 
 try:
-    # sleep(3)
-
-    Rotation_foot_LLeg.main(NAO_IP, PORT)
-    Move_backward.main(NAO_IP, PORT)
-    Union_arms.main(NAO_IP, PORT)
-    Stand.main(NAO_IP, PORT)
-    Hello.main(NAO_IP, PORT)
-    AirGuitar.main(NAO_IP, PORT)
-    ComeOn.main(NAO_IP, PORT)
-    Dab.main(NAO_IP, PORT)
-    DanceMove.main(NAO_IP, PORT)
-    PulpFiction.main(NAO_IP, PORT)
-    TheRobot.main(NAO_IP, PORT)
-
-    Mani_sui_fianchi.main(NAO_IP, PORT)
-    Ballo_braccia.main(NAO_IP, PORT)
-    Left_sprinkler.main(NAO_IP, PORT)
-    Right_sprinkler.main(NAO_IP, PORT)
-    Happy_Birthday.main(NAO_IP, PORT)
-
-
+    for move in choreography:
+        if move in Nao.MADATORY_POSITION:
+            print('\n' + move.upper() + '\n')
+        else:
+            print(move)
+        Nao.applyPosture(move)
 except Exception as e:
-    player.stop(song)
+    Nao.stopMusic(song)
     print(e)
 
-
-player.stop(song)
+Nao.stopMusic(song)
