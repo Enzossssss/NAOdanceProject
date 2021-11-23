@@ -3,8 +3,8 @@ from positions import *
 
 
 class Nao:
-    MADATORY_POSITION = ['SitRelax', 'Sit', 'Wipe_Forehead',
-                         'Stand', 'StandInt', 'Hello', 'StandZero', 'Crouch']
+    MANDATORY_POSITION = ['SitRelax', 'Sit', 'Wipe_Forehead',
+                          'Stand', 'StandInt', 'Hello', 'StandZero', 'Crouch']
 
     def __init__(self, NAO_IP, PORT):
         self.tts = ALProxy("ALTextToSpeech", NAO_IP, PORT)
