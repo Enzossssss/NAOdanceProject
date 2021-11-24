@@ -1,7 +1,8 @@
 import sys
 import os
 import time
-from utils import Nao
+from positions.position import MANDATORY_POSITION
+from robot import Nao
 
 NAO_IP = sys.argv[1]
 PORT = int(sys.argv[2])
@@ -25,7 +26,7 @@ time.sleep(1)
 
 try:
     for move in choreography:
-        if move in Nao.MADATORY_POSITION:
+        if move in MANDATORY_POSITION:
             print('\n' + move.upper() + '\n')
         else:
             print(move)

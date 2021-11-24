@@ -31,5 +31,6 @@ __all__ = [
     'Ballo_braccia',
     'Left_sprinkler',
     'Right_sprinkler',
-    'Happy_Birthday'
+    'Happy_Birthday',
+    'position'
 ]
