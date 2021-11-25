@@ -51,6 +51,7 @@ class Nao:
             'Mani_sui_fianchi': Mani_sui_fianchi,
             'Ballo_braccia': Ballo_braccia,
             'Right_sprinkler': Right_sprinkler,
+            'Happy_Birthday': Happy_Birthday
         }
 
         function = switch.get(string, None)
