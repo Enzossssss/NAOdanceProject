@@ -7,8 +7,6 @@ Diagonal_left
 Stand
 Diagonal_right
 Stand
-Double_movement
-Stand
 Move_backward
 Stand
 Move_forward
@@ -52,9 +50,5 @@ Stand
 Mani_sui_fianchi
 Stand
 Ballo_braccia
-Stand
-Left_sprinkler
-Stand
-Right_sprinkler
 Stand
 Happy_Birthday

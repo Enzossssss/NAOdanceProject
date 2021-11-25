@@ -58,7 +58,7 @@ def main(robotIP, port):
 
     # NAO:
     #ttsProxy.say("Mi siedo")
-    #time.sleep(1)
+    # time.sleep(1)
 
     # Set NAO in Stiffness On
 
@@ -66,7 +66,7 @@ def main(robotIP, port):
 
     # Send NAO to Pose Crouch
 
-    postureProxy.goToPosture("Sit", 0.5)
+    postureProxy.goToPosture("Sit", 0.8)
 
 
 if __name__ == "__main__":

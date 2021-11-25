@@ -3,7 +3,6 @@
     ma con entrambi i piedi attaccati al suolo (Crouch) '''
 
 
-
 import sys
 
 import motion
@@ -17,8 +16,7 @@ import time
 from naoqi import ALProxy
 
 
-
-#def StiffnessOn(proxy):
+# def StiffnessOn(proxy):
 #    # We use the "Body" name to signify the collection of all joints
 #    pNames = "Body"
 #    pStiffnessLists = 1.0
@@ -27,8 +25,6 @@ from naoqi import ALProxy
 
 
 def main(robotIP, port):
-
-
 
     # Init proxies.
 
@@ -41,8 +37,6 @@ def main(robotIP, port):
         print "Could not create proxy to ALMotion"
 
         print "Error was: ", e
-
-
 
     try:
 
@@ -66,31 +60,22 @@ def main(robotIP, port):
 
     # NAO:
     #ttsProxy.say("Infine termino nella posizione in ginocchio.")
-    #time.sleep(1)
-
-
+    # time.sleep(1)
 
     # Set NAO in Stiffness On
 
 #    StiffnessOn(motionProxy)
 
-
     # Send NAO to Pose Crouch
 
-    postureProxy.goToPosture("Crouch", 0.5)
+    postureProxy.goToPosture("Crouch", 1)
 
-
-
-
-
-    
 
 if __name__ == "__main__":
 
-    robotIP = "127.0.0.1" #"192.168.1.11"
+    robotIP = "127.0.0.1"  # "192.168.1.11"
 
-    port = 61476 #9559 # Insert NAO port
-
+    port = 61476  # 9559 # Insert NAO port
 
     if len(sys.argv) <= 1:
         print "(robotIP default: 127.0.0.1)"
@@ -101,4 +86,3 @@ if __name__ == "__main__":
         robotIP = sys.argv[1]
 
     main(robotIP, port)
-

@@ -91,9 +91,15 @@ def main():
             nao.applyPosture(move)
             end = time.time()
             print(move, end - start)
+            if move != 'Stand':
+                list.append((move, end - start))
     except Exception as e:
         # nao.stopMusic(song)
         print(e)
+
+    with open("t.txt", "w") as file:
+        for row in list:
+            file.write(str(row) + '\n')
 
     # nao.stopMusic(song)
 
