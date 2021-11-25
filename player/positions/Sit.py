@@ -57,8 +57,8 @@ def main(robotIP, port):
 #    StiffnessOn(motionProxy)
 
     # NAO:
-    ttsProxy.say("Mi siedo")
-    time.sleep(1)
+    #ttsProxy.say("Mi siedo")
+    #time.sleep(1)
 
     # Set NAO in Stiffness On
 
