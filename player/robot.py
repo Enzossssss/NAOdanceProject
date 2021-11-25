@@ -1,9 +1,8 @@
 from naoqi import ALProxy
 from positions import *
-
-import sys
-import os
 import time
+import os
+import sys
 
 
 class Nao:

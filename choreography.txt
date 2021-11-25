@@ -1,4 +1,0 @@
-StandInit
-Diagonal_right
-Arms_opening
-ComeOn
