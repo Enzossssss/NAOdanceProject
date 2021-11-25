@@ -52,3 +52,8 @@ Stand
 Ballo_braccia
 Stand
 Happy_Birthday
+Stand
+Sit
+Stand_from_sit
+SitRelax
+Stand_from_sit

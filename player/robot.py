@@ -4,6 +4,16 @@ import sys
 import os
 import time
 
+MANDATORY_POSITION = [
+    'StandInit',
+    'Sit',
+    'Wipe_Forehead',
+    'Stand',
+    'Hello',
+    'SitRelax',
+    'StandZero',
+    'Crouch'
+]
 
 class Nao:
     def __init__(self, NAO_IP, PORT):
@@ -76,9 +86,9 @@ def main():
 
     nao = Nao(NAO_IP, PORT)
 
-    #song = nao.playMusic(music_path)
+    song = nao.playMusic(music_path)
 
-    with open('time.txt', 'r') as file:
+    with open('choreography.txt', 'r') as file:
         choreography = [line.strip() for line in file]
 
     time.sleep(0.2)
@@ -87,21 +97,17 @@ def main():
 
     try:
         for move in choreography:
-            start = time.time()
+            if move in MANDATORY_POSITION:
+                print(move.upper())
+            else:
+                print(move)
             nao.applyPosture(move)
-            end = time.time()
-            print(move, end - start)
-            if move != 'Stand':
-                list.append((move, end - start))
     except Exception as e:
-        # nao.stopMusic(song)
+        nao.stopMusic(song)
         print(e)
 
-    with open("t.txt", "w") as file:
-        for row in list:
-            file.write(str(row) + '\n')
 
-    # nao.stopMusic(song)
+    nao.stopMusic(song)
 
 
 if __name__ == '__main__':

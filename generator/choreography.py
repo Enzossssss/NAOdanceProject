@@ -29,13 +29,16 @@ class Choreography(Problem):
             #print('sono dentro')
             return []
 
+        l = list(pos.keys())
+        random.shuffle(l)
+
         position, counter, time, moves = state
 
         if position == 'Sit' or position == 'SitRelax':
             return [('Sit', 'Stand_from_sit')]
 
         result = [(position, nextPosition)
-                  for nextPosition in pos.keys() if nextPosition not in moves]
+                  for nextPosition in l if nextPosition not in moves]
         result.append((position, self.goal[0]))
         #print('RESULT OF ACTION:', result)
         return result
@@ -53,7 +56,7 @@ class Choreography(Problem):
         if nextPosition in pos.keys():
             return (nextPosition, counter + 1, time + pos[nextPosition], tuple(list_moves))
         if nextPosition in man_pos.keys():
-            return (nextPosition, counter + 1, time + man_pos[nextPosition], tuple(list_moves))
+            return (nextPosition, counter + 1, time, tuple(list_moves))
 
     def goal_test(self, state):
         #print('STATE OF GOAL_TEST:', state)
@@ -64,9 +67,8 @@ class Choreography(Problem):
 
 
 def generate(start, end):
-    return Choreography((start, 0, man_pos[start],
-                         (start, )), (end, 5, 20, ()))
-
+    return Choreography((start, 0, 0,
+                         (start, )), (end, 6, 20, ()))
 
 def main():
     pos = list(man_pos.keys())
