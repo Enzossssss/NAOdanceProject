@@ -9,7 +9,7 @@ functions.
 import sys
 from collections import deque
 
-from utils import *
+from aima.utils import *
 
 
 class Problem:
@@ -99,7 +99,8 @@ class Node:
     def child_node(self, problem, action):
         """[Figure 3.10]"""
         next_state = problem.result(self.state, action)
-        next_node = Node(next_state, self, action, problem.path_cost(self.path_cost, self.state, action, next_state))
+        next_node = Node(next_state, self, action, problem.path_cost(
+            self.path_cost, self.state, action, next_state))
         return next_node
 
     def solution(self):
@@ -274,7 +275,8 @@ def best_first_graph_search(problem, f, display=False):
         node = frontier.pop()
         if problem.goal_test(node.state):
             if display:
-                print(len(explored), "paths have been expanded and", len(frontier), "paths remain in the frontier")
+                print(len(explored), "paths have been expanded and",
+                      len(frontier), "paths remain in the frontier")
             return node
         explored.add(node.state)
         for child in node.expand(problem):
@@ -421,7 +423,7 @@ def astar_search(problem, h=None, display=False):
 
 
 # ______________________________________________________________________________
-# A* heuristics 
+# A* heuristics
 
 class EightPuzzle(Problem):
     """ The problem of sliding tiles numbered from 1 to 8 on a 3x3 board, where one of the
@@ -643,7 +645,8 @@ def hill_climbing(problem):
         neighbors = current.expand(problem)
         if not neighbors:
             break
-        neighbor = argmax_random_tie(neighbors, key=lambda node: problem.value(node.state))
+        neighbor = argmax_random_tie(
+            neighbors, key=lambda node: problem.value(node.state))
         if problem.value(neighbor.state) <= problem.value(current.state):
             break
         current = neighbor
@@ -667,7 +670,8 @@ def simulated_annealing(problem, schedule=exp_schedule()):
         if not neighbors:
             return current.state
         next_choice = random.choice(neighbors)
-        delta_e = problem.value(next_choice.state) - problem.value(current.state)
+        delta_e = problem.value(next_choice.state) - \
+            problem.value(current.state)
         if delta_e > 0 or probability(np.exp(delta_e / T)):
             current = next_choice
 
@@ -686,7 +690,8 @@ def simulated_annealing_full(problem, schedule=exp_schedule()):
         if not neighbors:
             return current.state
         next_choice = random.choice(neighbors)
-        delta_e = problem.value(next_choice.state) - problem.value(current.state)
+        delta_e = problem.value(next_choice.state) - \
+            problem.value(current.state)
         if delta_e > 0 or probability(np.exp(delta_e / T)):
             current = next_choice
 
@@ -730,7 +735,8 @@ def and_or_graph_search(problem):
 # Pre-defined actions for PeakFindingProblem
 directions4 = {'W': (-1, 0), 'N': (0, 1), 'E': (1, 0), 'S': (0, -1)}
 directions8 = dict(directions4)
-directions8.update({'NW': (-1, 1), 'NE': (1, 1), 'SE': (1, -1), 'SW': (-1, -1)})
+directions8.update({'NW': (-1, 1), 'NE': (1, 1),
+                   'SE': (1, -1), 'SW': (-1, -1)})
 
 
 class PeakFindingProblem(Problem):
@@ -954,7 +960,8 @@ def init_population(pop_number, gene_pool, state_length):
     g = len(gene_pool)
     population = []
     for i in range(pop_number):
-        new_individual = [gene_pool[random.randrange(0, g)] for j in range(state_length)]
+        new_individual = [gene_pool[random.randrange(
+            0, g)] for j in range(state_length)]
         population.append(new_individual)
 
     return population
@@ -1053,7 +1060,8 @@ class Graph:
     def nodes(self):
         """Return a list of nodes in the graph."""
         s1 = set([k for k in self.graph_dict.keys()])
-        s2 = set([k2 for v in self.graph_dict.values() for k2, v2 in v.items()])
+        s2 = set([k2 for v in self.graph_dict.values()
+                 for k2, v2 in v.items()])
         nodes = s1.union(s2)
         return list(nodes)
 

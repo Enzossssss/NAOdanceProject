@@ -1,4 +1,4 @@
-from search import *
+from aima.search import *
 from time import sleep
 from position import *
 
@@ -101,15 +101,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# mc1 = Choreography(('StandInit', 0, pos['StandInit'],
-#                    ('StandInit', )), ('Sit', 5, 25, ()))
-
-
-# mc1 = generate('Sit', 'Hello')
-
-# soln = depth_first_graph_search(mc1)
-
-# print('----------###########à-------------------')
-# print(soln.state)
-# print('-------------#################----------------')

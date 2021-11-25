@@ -7,5 +7,5 @@ then
 	cd ..
 	python2 main.py $1 $2
 else
-  echo 'parametri non validi'
+  echo 'parameter not valid'
 fi
