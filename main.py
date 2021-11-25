@@ -1,7 +1,7 @@
 import sys
 import os
 import time
-from positions.position import MANDATORY_POSITION
+from generator.position import MANDATORY_POSITION
 from robot import Nao
 
 NAO_IP = sys.argv[1]
@@ -17,12 +17,10 @@ Nao.say("Team Becchi pagliacci <3. P.S.: vi vogliamo bene ugualmente")
 
 song = Nao.playMusic(music_path)
 
-# TODO: function to create choreogarfy
-
 with open('choreography.txt', 'r') as file:
     choreography = [line.strip() for line in file]
 
-time.sleep(1)
+time.sleep(0.2)
 
 try:
     for move in choreography:

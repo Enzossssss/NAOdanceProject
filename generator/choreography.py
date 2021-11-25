@@ -1,9 +1,9 @@
 from search import *
 from time import sleep
-from positions import position
+from position import *
 
-pos = position.POSITION
-man_pos = position.MANDATORY_POSITION
+pos = POSITION
+man_pos = MANDATORY_POSITION
 
 """ state: (current position, number of move, time to arrive at current position, list of previous position) """
 
