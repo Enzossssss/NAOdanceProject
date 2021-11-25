@@ -1,7 +1,6 @@
 import sys
 import os
 import time
-from generator.position import MANDATORY_POSITION
 from robot import Nao
 
 NAO_IP = sys.argv[1]
@@ -24,10 +23,7 @@ time.sleep(0.2)
 
 try:
     for move in choreography:
-        if move in MANDATORY_POSITION:
-            print('\n' + move.upper() + '\n')
-        else:
-            print(move)
+        print(move)
         Nao.applyPosture(move)
 except Exception as e:
     Nao.stopMusic(song)

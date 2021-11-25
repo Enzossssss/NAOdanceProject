@@ -1,6 +1,10 @@
 from naoqi import ALProxy
 from positions import *
 
+import sys
+import os
+import time
+
 
 class Nao:
     def __init__(self, NAO_IP, PORT):
@@ -60,3 +64,38 @@ class Nao:
             print("....\n")
         else:
             function.main(self.ip, self.port)
+
+
+def main():
+    NAO_IP = sys.argv[1]
+    PORT = int(sys.argv[2])
+
+    print(NAO_IP)
+    print(PORT)
+
+    music_path = os.path.abspath(os.getcwd()) + '/music.wav'
+
+    nao = Nao(NAO_IP, PORT)
+
+    nao.say("Team Becchi pagliacci <3. P.S.: vi vogliamo bene ugualmente")
+
+    song = nao.playMusic(music_path)
+
+    with open('choreography.txt', 'r') as file:
+        choreography = [line.strip() for line in file]
+
+    time.sleep(0.2)
+
+    try:
+        for move in choreography:
+            print(move)
+            nao.applyPosture(move)
+    except Exception as e:
+        nao.stopMusic(song)
+        print(e)
+
+    nao.stopMusic(song)
+
+
+if __name__ == '__main__':
+    main()
