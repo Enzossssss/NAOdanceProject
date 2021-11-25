@@ -15,6 +15,7 @@ MANDATORY_POSITION = [
     'Crouch'
 ]
 
+
 class Nao:
     def __init__(self, NAO_IP, PORT):
         self.tts = ALProxy("ALTextToSpeech", NAO_IP, PORT)
@@ -79,10 +80,12 @@ def main():
     NAO_IP = sys.argv[1]
     PORT = int(sys.argv[2])
 
-    print(NAO_IP)
-    print(PORT)
+    print('')
+    print('IP: ' + str(NAO_IP))
+    print('PORT: ' + str(PORT))
+    print('')
 
-    music_path = os.path.abspath(os.getcwd()) + '/music.wav'
+    music_path = os.path.abspath(os.getcwd()) + '/mille.wav'
 
     nao = Nao(NAO_IP, PORT)
 
@@ -98,14 +101,15 @@ def main():
     try:
         for move in choreography:
             if move in MANDATORY_POSITION:
+                print('')
                 print(move.upper())
+                print('')
             else:
                 print(move)
             nao.applyPosture(move)
     except Exception as e:
         nao.stopMusic(song)
         print(e)
-
 
     nao.stopMusic(song)
 

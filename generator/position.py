@@ -1,11 +1,11 @@
 MANDATORY_POSITION = {
     'StandInit': 0,
+    'Hello': 4.639948129653931,
+    'Stand': 2.02,
     'Sit': 11.704515933990479,
     'Wipe_Forehead': 5.119374990463257,
-    'Stand': 2.02,
-    'Hello': 4.639948129653931,
-    'SitRelax': 14.200019121170044,
     'StandZero': 1.4620330333709717,
+    'SitRelax': 14.200019121170044,
     'Crouch': 1.6594460010528564
 }
 
@@ -19,7 +19,7 @@ POSITION = {
     'Right_arm': 9.083323955535889,
     'Rotation_foot_LLeg': 9.015203952789307,
     'Rotation_foot_RLeg': 8.62186598777771,
-    'Rotation_handgun_object': 3.1164510250091553,
+    # 'Rotation_handgun_object': 3.1164510250091553,
     'Union_arms': 8.780297994613647,
     'AirGuitar': 4.03978705406189,
     'ComeOn': 3.520128011703491,

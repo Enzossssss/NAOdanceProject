@@ -63,12 +63,13 @@ class Choreography(Problem):
         position, counter, time, moves = state
         positionGoal, counterGoal, timeGoal, moves = self.goal
 
-        return position == positionGoal and counter >= counterGoal and (time >= timeGoal-5 and time <= timeGoal)
+        return position == positionGoal and counter >= counterGoal and (time >= timeGoal-2.5 and time <= timeGoal)
 
 
 def generate(start, end):
     return Choreography((start, 0, 0,
                          (start, )), (end, 6, 20, ()))
+
 
 def main():
     pos = list(man_pos.keys())
