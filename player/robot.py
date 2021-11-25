@@ -76,14 +76,14 @@ def main():
 
     nao = Nao(NAO_IP, PORT)
 
-    nao.say("Team Becchi pagliacci <3. P.S.: vi vogliamo bene ugualmente")
+    #song = nao.playMusic(music_path)
 
-    song = nao.playMusic(music_path)
-
-    with open('choreography.txt', 'r') as file:
+    with open('time.txt', 'r') as file:
         choreography = [line.strip() for line in file]
 
     time.sleep(0.2)
+
+    list = []
 
     try:
         for move in choreography:
@@ -92,10 +92,10 @@ def main():
             end = time.time()
             print(move, end - start)
     except Exception as e:
-        nao.stopMusic(song)
+        # nao.stopMusic(song)
         print(e)
 
-    nao.stopMusic(song)
+    # nao.stopMusic(song)
 
 
 if __name__ == '__main__':
