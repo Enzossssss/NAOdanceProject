@@ -87,8 +87,10 @@ def main():
 
     try:
         for move in choreography:
-            print(move)
+            start = time.time()
             nao.applyPosture(move)
+            end = time.time()
+            print(move, end - start)
     except Exception as e:
         nao.stopMusic(song)
         print(e)
