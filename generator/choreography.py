@@ -91,7 +91,7 @@ def main():
     print()
     print('Choreograph will be start...')
 
-    with open("../choreography.txt", "w") as file:
+    with open("../player/choreography.txt", "w") as file:
         for row in final:
             if row == pos[-1]:
                 file.write(str(row))
