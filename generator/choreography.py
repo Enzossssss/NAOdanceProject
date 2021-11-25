@@ -33,7 +33,7 @@ class Choreography(Problem):
 
         if position == 'Sit' or position == 'SitRelax':
             return [('Sit', 'Stand')]
-        # print(moves)
+
         result = [(position, nextPosition)
                   for nextPosition in pos.keys() if nextPosition not in moves]
         result.append((position, self.goal[0]))
@@ -83,6 +83,10 @@ def main():
             final.extend(solution.state[-1][1:-1])
 
     final.append(pos[-1])
+
+    print()
+    print('Choreograph: ')
+    print(final)
 
     print()
     print('Choreograph will be start...')
