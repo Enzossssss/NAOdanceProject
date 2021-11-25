@@ -4,10 +4,6 @@ Arms_opening
 ComeOn
 Dab
 Sit
-Stand
-Diagonal_right
-Arms_opening
-Dab
 Wipe_Forehead
 Diagonal_right
 Arms_opening

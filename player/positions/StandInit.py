@@ -66,7 +66,7 @@ def main(robotIP, port):
 
     # Send NAO to Pose Crouch
 
-    postureProxy.goToPosture("StandInit", 0.6)
+    postureProxy.goToPosture("StandInit", 0.8)
 
 
 if __name__ == "__main__":

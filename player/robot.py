@@ -23,6 +23,7 @@ class Nao:
 
     def applyPosture(self, string):
         switch = {
+            'Stand_from_sit': Stand_from_sit,
             'Arms_opening': Arms_opening,
             'Crouch': Crouch,
             'Diagonal_left': Diagonal_left,

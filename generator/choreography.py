@@ -32,7 +32,7 @@ class Choreography(Problem):
         position, counter, time, moves = state
 
         if position == 'Sit' or position == 'SitRelax':
-            return [('Sit', 'Stand')]
+            return [('Sit', 'Stand_from_sit')]
 
         result = [(position, nextPosition)
                   for nextPosition in pos.keys() if nextPosition not in moves]

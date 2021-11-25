@@ -10,6 +10,7 @@ MANDATORY_POSITION = {
 }
 
 POSITION = {
+    'Stand_from_sit': 7.8,
     'Move_backward': 3.1,
     'Move_forward': 3.05,
     'Union_arms': 7.9,

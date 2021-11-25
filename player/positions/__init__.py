@@ -32,4 +32,6 @@ __all__ = [
     'Left_sprinkler',
     'Right_sprinkler',
     'Happy_Birthday',
+
+    'Stand_from_sit'
 ]
