@@ -27,7 +27,6 @@ class Nao:
             'Crouch': Crouch,
             'Diagonal_left': Diagonal_left,
             'Diagonal_right': Diagonal_right,
-            'Double_movement': Double_movement,
             'Move_backward': Move_backward,
             'Move_forward': Move_forward,
             'Right_arm': Right_arm,
@@ -50,7 +49,6 @@ class Nao:
             'TheRobot': TheRobot,
             'Mani_sui_fianchi': Mani_sui_fianchi,
             'Ballo_braccia': Ballo_braccia,
-            'Left_sprinkler': Left_sprinkler,
             'Right_sprinkler': Right_sprinkler,
         }
 
