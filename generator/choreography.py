@@ -1,5 +1,4 @@
 from aima.search import *
-from time import sleep
 from position import *
 
 pos = POSITION
@@ -24,9 +23,7 @@ class Choreography(Problem):
             return False
 
     def actions(self, state):
-        # sleep(1)
         if not self.isValid(state):
-            #print('sono dentro')
             return []
 
         l = list(pos.keys())
@@ -40,12 +37,9 @@ class Choreography(Problem):
         result = [(position, nextPosition)
                   for nextPosition in l if nextPosition not in moves]
         result.append((position, self.goal[0]))
-        #print('RESULT OF ACTION:', result)
         return result
 
     def result(self, state, action):
-        # sleep(1)
-        #print('ACTION OF RESULT:', action)
         position, counter, time, moves = state
 
         nextPosition = action[-1]
@@ -59,7 +53,6 @@ class Choreography(Problem):
             return (nextPosition, counter + 1, time, tuple(list_moves))
 
     def goal_test(self, state):
-        #print('STATE OF GOAL_TEST:', state)
         position, counter, time, moves = state
         positionGoal, counterGoal, timeGoal, moves = self.goal
 
