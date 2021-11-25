@@ -1,6 +1,8 @@
 # NAO Planning Challenge 2021
 Team Name: WALL-E
+
 Members: Vincenzo Collura, Samuele Marino
+
 Fundamentals of Artificial Intelligence and Knowledge Representation 
 
 Getting Started:
