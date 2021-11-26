@@ -20,10 +20,14 @@ Getting Started:
 
 5. Install all the requirements
 
-   - ./install.sh
+   ```
+   ./install.sh
+   ```
 
 6. Open Choregraphe in order to simulate NAO
 7. Copy the ip and the port of NAO
 8. Launch the starting script
 
-   - ./start.sh <nao_ip> <nao_port>
+   ```
+   ./start.sh <nao_ip> <nao_port>
+   ```
