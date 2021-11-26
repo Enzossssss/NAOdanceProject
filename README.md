@@ -21,9 +21,9 @@ Getting Started:
    ```
    chmod 777 ./start.sh
    ```
-   
+
 7. Open Choregraphe in order to simulate NAO
-8. Connect to a virtual robot
+8. Connect to virtual robot
 9. Copy the ip and the port of NAO
 10. Launch the starting script
 
@@ -78,7 +78,10 @@ NAOdanceProject
 │   │   └── Wipe_Forehead.py
 │   ├── robot.py
 │   └── time.txt
-├── Presentation.pdf
+├── presentation
+│   ├── demo.mp4
+│   └── presentation.pdf
 ├── README.md
 └── start.sh
+
 ```
