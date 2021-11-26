@@ -13,10 +13,10 @@ Getting Started:
 3. Open a terminal in the project path
 4. Change permission for scripts
 
-   '''
+   ```
    chmod 777 ./start.sh
    chmod 777 ./install.sh
-   '''
+   ```
 
 5. Install all the requirements
 
