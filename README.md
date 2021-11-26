@@ -10,28 +10,29 @@ Getting Started:
 
 1. Use the NAO Virtual Machine
 2. Make sure that both Python 2 and Python 3 are installed.
-3. Open a terminal in the project path
-4. Change permission for scripts
+3. Download the repository
+4. Open a terminal in the project path
+5. Change permission for scripts
 
    ```
    chmod 777 ./start.sh
    chmod 777 ./install.sh
    ```
 
-5. Install all the requirements
+6. Install all the requirements
 
    ```
    ./install.sh
    ```
 
-6. Open Choregraphe in order to simulate NAO
-7. Connect to a virtual robot
-8. Copy the ip and the port of NAO
-9. Launch the starting script
+7. Open Choregraphe in order to simulate NAO
+8. Connect to a virtual robot
+9. Copy the ip and the port of NAO
+10. Launch the starting script
 
-   ```
-   ./start.sh <nao_ip> <nao_port>
-   ```
+    ```
+    ./start.sh <nao_ip> <nao_port>
+    ```
 
 # Organization Folders
 
