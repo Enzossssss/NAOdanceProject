@@ -3,7 +3,6 @@ __all__ = [
     'Crouch',
     'Diagonal_left',
     'Diagonal_right',
-    'Double_movement',
     'Move_backward',
     'Move_forward',
     'Right_arm',
@@ -16,22 +15,17 @@ __all__ = [
     'StandInit',
     'StandZero',
     'Union_arms',
-
     'Hello',
     'Wipe_Forehead',
-
     'AirGuitar',
     'ComeOn',
     'Dab',
     'DanceMove',
     'PulpFiction',
     'TheRobot',
-
     'Mani_sui_fianchi',
     'Ballo_braccia',
-    'Left_sprinkler',
     'Right_sprinkler',
     'Happy_Birthday',
-
     'Stand_from_sit'
 ]

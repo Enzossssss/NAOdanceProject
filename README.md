@@ -12,19 +12,16 @@ Getting Started:
 2. Make sure that both Python 2 and Python 3 are installed.
 3. Download the repository
 4. Open a terminal in the project path
-5. Change permission for scripts
+5. Install numpy
+   ```
+   pip3 install numpy
+   ```
+6. Change permission for script
 
    ```
    chmod 777 ./start.sh
-   chmod 777 ./install.sh
    ```
-
-6. Install all the requirements
-
-   ```
-   ./install.sh
-   ```
-
+   
 7. Open Choregraphe in order to simulate NAO
 8. Connect to a virtual robot
 9. Copy the ip and the port of NAO
