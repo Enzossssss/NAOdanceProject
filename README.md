@@ -77,10 +77,10 @@ NAOdanceProject
 │   │   ├── Stand.py
 │   │   ├── StandZero.py
 │   │   ├── TheRobot.py
+│   │   ├── time.txt
 │   │   ├── Union_arms.py
 │   │   └── Wipe_Forehead.py
-│   ├── robot.py
-│   └── time.txt
+│   └── robot.py
 ├── presentation
 │   ├── demo.mp4
 │   └── presentation.pdf
