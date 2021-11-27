@@ -96,8 +96,6 @@ def main():
 
     time.sleep(0.2)
 
-    list = []
-
     try:
         for move in choreography:
             if move in MANDATORY_POSITION:
