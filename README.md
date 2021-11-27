@@ -11,6 +11,9 @@ Getting Started:
 1. Use the NAO Virtual Machine
 2. Make sure that both Python 2 and Python 3 are installed.
 3. Download the repository
+   ```
+   git clone https://github.com/Enzossssss/NAOdanceProject
+   ```
 4. Open a terminal in the project path
 5. Install numpy
    ```
