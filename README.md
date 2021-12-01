@@ -90,7 +90,7 @@ NAOdanceProject
 │   │   └── Wipe_Forehead.py
 │   └── robot.py
 ├── presentation
-│   ├── demo.mp4
+│   ├── demo_wall-e_short.mp4
 │   └── presentation.pdf
 ├── README.md
 └── start.sh
