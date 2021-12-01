@@ -56,12 +56,12 @@ class Choreography(Problem):
         position, counter, time, moves = state
         positionGoal, counterGoal, timeGoal, moves = self.goal
 
-        return position == positionGoal and counter >= counterGoal and (time >= timeGoal-2.5 and time <= timeGoal)
+        return position == positionGoal and counter >= counterGoal and (time >= timeGoal-0.5 and time <= timeGoal)
 
 
 def generate(start, end):
     return Choreography((start, 0, 0,
-                         (start, )), (end, 6, 20, ()))
+                         (start, )), (end, 6, 20.3, ()))
 
 
 def main():
@@ -69,14 +69,21 @@ def main():
     final = []
 
     print('Generating choreography...')
+    print()
 
     for i in range(len(pos) - 1):
         final.append(pos[i])
 
         problem = generate(pos[i], pos[i+1])
-        solution = depth_first_graph_search(problem)
+        solution = iterative_deepening_search(problem)
         if solution != None:
             final.extend(solution.state[-1][1:-1])
+
+        print('++++++++++++++++++')
+        print(solution.state)
+        print('++++++++++++++++++')
+        print()
+        # sleep(1)
 
     final.append(pos[-1])
 
