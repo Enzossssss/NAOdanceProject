@@ -83,7 +83,6 @@ def main():
         print(solution.state)
         print('++++++++++++++++++')
         print()
-        # sleep(1)
 
     final.append(pos[-1])
 
