@@ -34,6 +34,14 @@ Getting Started:
     ./start.sh <nao_ip> <nao_port>
     ```
 
+# Demo Video
+
+The video can be seen at the following [link](https://liveunibo-my.sharepoint.com/:v:/g/personal/samuele_marino_studio_unibo_it/EfDueZiOCRVOuNOPI9_SGGQBU-3woOOdwP5SfEL9Z5nQyw?e=EniBuR)
+
+_Only people in Alma Mater Studiorum Università di Bologna can access to the link_
+
+The demo video is in presentation folder
+
 # Organization Folders
 
 ```
